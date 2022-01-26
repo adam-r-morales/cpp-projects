@@ -3,6 +3,8 @@
 #ifndef _HEADER_H
 #define _HEADER_H
 
+
+//Declare Shape class
 class Shape
 {
 public:
@@ -21,6 +23,7 @@ protected:
 	float x_, y_, z_;
 };
 
+//Declare Box class
 class Box : public Shape
 {
 public:
@@ -36,6 +39,7 @@ private:
 	Box& operator =(const Box& b);
 };
 
+//Declare Cylinder class
 class Cylinder : public Shape
 {
 public:
@@ -52,6 +56,7 @@ private:
 	float pi = 3.14;
 };
 
+//Declare Rectangle class
 class Rectangle : public Shape
 {
 public:
