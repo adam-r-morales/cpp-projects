@@ -2,19 +2,23 @@
 
 int main()
 {
+	//Declare variables
 	float x(0.0), y(0.0), z(0.0);
 	char code;
 	Shape* sptr;
 
+	//Do-while to keep prgram rnning until user wants to quit
 	do
 	{
+		//Define sptr as null to rest for each iteration of do-while
 		sptr = nullptr;
+		//Prompt user to choose shape or quit
 		std::cout << "Enter code to calculate size of shape:(0 = Shape, 1 = Box, 2 = Cylinder, 3 = Rectangle)";
 		std::cout << std::endl;
 		std::cout << "or enter 'q' to quit" << std::endl;
-
 		std::cin >> code;
 
+		//Switch statement to allow user to input dimension of particular shape 
 		switch (code)
 		{
 			case '0':
@@ -67,9 +71,14 @@ int main()
 				code = 'q';
 
 				break;
+			default:
+				std::cerr << "ERROR: Incorrect code" << std::endl;
+				break;
 
 		}
 
+		//If shape has been pick, then print out result
+		//Delete data for next iteration
 		if (sptr != nullptr)
 		{
 			std::cout << " Name: " << sptr->Name() << '\n';
@@ -77,7 +86,7 @@ int main()
 			std::cout << " Area:   " << sptr->Area() << '\n';
 			delete sptr;
 		}
-	} while (code != 'q');
+	} while (code != 'q'); //End do-while
 
 	return 0;
 }
