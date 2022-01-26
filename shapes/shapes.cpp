@@ -2,6 +2,15 @@
 #include "Header.h"
 #include <cmath>
 
+/*
+Defines the methods for the Shape class:
+Shape()
+Shape(float, float, float)
+~Shape()
+const char* Name() const
+float Volume() const
+float Area() const
+*/
 Shape::Shape() : x_(0.0), y_(0.0), z_(0.0)
 {
 
@@ -32,6 +41,15 @@ float Shape::Area() const
 	return 0.0;
 }
 
+/*
+Defines the methods for the Box class:
+Box()
+Box(float, float, float)
+~Box()
+const char* Name() const
+float Volume() const
+float Area() const
+*/
 Box::Box() : Shape::Shape()
 {
 
@@ -62,6 +80,15 @@ float Box::Area() const
 	return 2 * (x_ * y_) + 2 * (x_ * z_) + 2 * (y_ * z_);
 }
 
+/*
+Defines the methods for the Cylinder class:
+Cylinder()
+Cylinder(float, float)
+~Cylinder()
+const char* Name() const
+float Volume() const
+float Area() const
+*/
 Cylinder::Cylinder() : Shape::Shape()
 {
 
@@ -92,6 +119,14 @@ float Cylinder::Area() const
 	return (2 * pi * x_ * y_) + (2 * pi * x_ * x_);
 }
 
+/*
+Defines the methods for the Rectangle class:
+Rectangle()
+Rectangle(float, float)
+~Rectangle()
+const char* Name() const
+float Area() const
+*/
 Rectangle::Rectangle() : Shape::Shape()
 {
 
