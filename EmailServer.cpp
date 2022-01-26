@@ -5,6 +5,7 @@
 #include <cstdio>
 
 
+
 void MainMenu();
 void Login();
 void ShowInbox(std::string username, std::ostream & sout);
