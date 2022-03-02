@@ -19,7 +19,7 @@ through MySQL.
 --Also calculates sums for rows, columns, and tables.  
 --Each database is designated to be year's finances. Each table is designated to be various  
 various financial categories(i.e. lump sum payments, monthly bills, income, etc.). Each row  
-is designated to be a month and each column is designated to be a specific financial attribute  
+is designated to be a month and each column is designated to be a specific financial attribute
 (i.e. Car Insurance under monthly bills or Pention under income).  
 --This program required the use of both MySQL and Connector C++ which allowed access to MySQL from C++.  
 Please make sure these are setup on your computer before compiling.  
